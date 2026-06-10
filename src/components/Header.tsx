@@ -55,62 +55,44 @@ export default function Header({
     const number = "1234567890";
     const text = encodeURIComponent("Hello MARA Clothmart! I’m interested in your premium collections.");
     window.open(`https://wa.me/${number}?text=${text}`, "_blank");
-  };  return (
+  };
+
+  return (
     <header
       id="main-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md shadow-none border-b border-zinc-900/10 dark:border-white/10 py-3"
-          : "bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm py-5 border-b border-zinc-900/10 dark:border-white/10"
+          : "bg-white/90 dark:bg-zinc-950/90 backdrop-blur-sm py-5 border-b border-zinc-900/10 dark:border-white/10"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between min-h-[50px]">
+        {/* Top brand line with centered logo and right aligned utilities */}
+        <div className="relative flex items-center justify-between min-h-[55px]">
           
-          {/* Left Navigation (Desktop Only) */}
-          <nav className="hidden lg:flex items-center space-x-6 w-1/3">
-            {navLinks.slice(0, 3).map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleLinkClick(link.id)}
-                className="font-sans font-medium text-[10px] tracking-[0.25em] text-zinc-900 dark:text-zinc-100 hover:text-gold dark:hover:text-gold uppercase cursor-pointer transition-colors duration-200"
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
+          {/* Left space for alignment balance/Desktop Heritage tagline (Desktop Only) */}
+          <div className="hidden lg:flex items-center text-zinc-400 dark:text-zinc-500 text-[8px] uppercase tracking-[0.35em] font-mono select-none w-1/3">
+            EST. 2016 // HAUTE COUTURE ATELIER
+          </div>
 
-          {/* Absolute Centered Branding (Editorial Style Logo) */}
+          {/* Absolute Centered Branding (Perfect math-centered editorial style logo) */}
           <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
             <button
               onClick={() => handleLinkClick("home")}
               className="focus:outline-none flex flex-col items-center group cursor-pointer"
             >
-              <span className="text-3xl sm:text-4xl font-serif tracking-[0.18em] font-bold italic uppercase text-zinc-900 dark:text-white leading-none transition-transform group-hover:scale-102">
-                Mara
-              </span>
-              <span className="text-[7px] tracking-[0.5em] text-gold font-medium uppercase mt-1">
-                Clothmart
+              <h1 className="text-3xl sm:text-4xl font-serif tracking-[0.22em] font-bold text-zinc-950 dark:text-white uppercase leading-none transition-transform group-hover:scale-[1.01]">
+                MARA
+              </h1>
+              <span className="text-[8px] tracking-[0.55em] text-gold font-semibold uppercase mt-1 leading-none">
+                CLOTHMART
               </span>
             </button>
           </div>
 
-          {/* Desktop Right items & Controls */}
-          <div className="flex items-center justify-end space-x-4 w-1/2 lg:w-1/3 ml-auto">
+          {/* Desktop & Mobile Right utilities aligned perfectly on the right side */}
+          <div className="flex items-center justify-end space-x-2.5 sm:space-x-4 ml-auto w-12 lg:w-1/3">
             
-            {/* Desktop Navigation Second Half */}
-            <nav className="hidden xl:flex items-center space-x-6 mr-4">
-              {navLinks.slice(3).map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleLinkClick(link.id)}
-                  className="font-sans font-medium text-[10px] tracking-[0.25em] text-zinc-900 dark:text-zinc-100 hover:text-gold dark:hover:text-gold uppercase cursor-pointer transition-colors duration-200"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </nav>
-
             {/* Search Input Bar (Desktop) */}
             <div className="relative hidden md:block">
               <input
@@ -122,8 +104,8 @@ export default function Header({
                 onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
                 className={`pl-8 pr-4 py-1.5 rounded-none text-[10px] tracking-widest border transition-all duration-300 focus:outline-none ${
                   isSearchFocused
-                    ? "w-48 border-zinc-900 dark:border-white bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white"
-                    : "w-32 border-zinc-200 dark:border-zinc-800 bg-transparent text-zinc-650 dark:text-zinc-400"
+                    ? "w-48 border-zinc-950 dark:border-white bg-white dark:bg-zinc-900 text-zinc-950 dark:text-white"
+                    : "w-32 border-zinc-200 dark:border-zinc-805 bg-transparent text-zinc-500 dark:text-zinc-400"
                 }`}
               />
               <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-zinc-400" />
@@ -198,6 +180,23 @@ export default function Header({
 
           </div>
         </div>
+
+        {/* Separated Desktop Navigation bar providing mathematically equal spacing, avoiding any overlap */}
+        <div className="hidden lg:flex justify-center items-center py-2 px-12 border-t border-zinc-100 dark:border-white/5 mt-3 select-none">
+          <nav className="flex items-center justify-between w-full max-w-2xl px-4">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleLinkClick(link.id)}
+                className="font-sans font-medium text-[10px] tracking-[0.25em] text-zinc-800 dark:text-zinc-200 hover:text-gold dark:hover:text-gold uppercase cursor-pointer transition-all duration-200 relative py-1.5 group font-semibold"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-gold transition-all duration-300 group-hover:w-full"></span>
+              </button>
+            ))}
+          </nav>
+        </div>
+
       </div>
 
       {/* Mobile Drawer Navigation Menu */}

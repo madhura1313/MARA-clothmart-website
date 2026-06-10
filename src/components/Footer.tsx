@@ -53,11 +53,11 @@ export default function Footer({ onNavigateToSection }: FooterProps) {
               onClick={() => handleLinkClick("home")}
               className="flex flex-col items-start focus:outline-none cursor-pointer group text-left"
             >
-              <h3 className="font-serif text-3xl font-bold tracking-[0.22em] text-white leading-none lowercase italic">
-                mara
+              <h3 className="font-serif text-3xl font-bold tracking-[0.22em] text-white leading-none uppercase">
+                MARA
               </h3>
               <span className="font-sans text-[8px] tracking-[0.35em] text-gold font-medium uppercase block mt-1">
-                clothmart
+                CLOTHMART
               </span>
             </button>
 

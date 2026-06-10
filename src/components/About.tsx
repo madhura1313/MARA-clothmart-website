@@ -81,7 +81,7 @@ export default function About() {
               <div className="overflow-hidden rounded-none border border-zinc-900/10 dark:border-white/10 p-2 bg-zinc-50 dark:bg-zinc-900/30">
                 <img
                   src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=400"
-                  alt="Elegant styling MARA"
+                  alt="Elegant styling MARA Clothmart"
                   className="w-full h-48 sm:h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-none"
                 />
               </div>
@@ -121,7 +121,7 @@ export default function About() {
                 Heritage & Promise
               </span>
               <h2 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
-                About <span className="italic font-normal">Mara</span>
+                About <span className="italic font-normal">MARA Clothmart</span>
               </h2>
               <div className="w-10 h-[1px] bg-zinc-950 dark:bg-zinc-200"></div>
             </div>

@@ -72,11 +72,11 @@ export default function Features() {
             Why We Excel
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
-            Why Choose <span className="italic font-normal">Mara</span>
+            Why Choose <span className="italic font-normal">MARA Clothmart</span>
           </h2>
           <div className="w-10 h-[1px] bg-zinc-950 dark:bg-zinc-200"></div>
           <p className="font-sans text-xs text-zinc-550 dark:text-zinc-400 font-light leading-relaxed">
-            At MARA, we care deeply about luxury feel, fabric source traceability, and custom fit confidence, ensuring that your garments look spectacular season after season.
+            At MARA Clothmart, we care deeply about luxury feel, fabric source traceability, and custom fit confidence, ensuring that your garments look spectacular season after season.
           </p>
         </div>
 
