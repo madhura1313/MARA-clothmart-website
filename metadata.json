@@ -1,0 +1,6 @@
+{
+  "name": "MARA Clothmart",
+  "description": "Premium and elegant fashion clothing retail brand offering high-quality collections for men, women, and children.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
